@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой первый сайт</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: sans-serif;
+            padding: 40px;
+        }
+        h1 {
+            color: #ff5722;
+        }
+
+        /* 🎨 СТИЛИ ДЛЯ КАРТИНКИ */
+        .my-img {
+            display: block;        /* Переносим на новую строку */
+            margin-bottom: 20px;   /* Отступ до кнопки */
+            border-radius: 12px;   /* Скругляем углы */
+            max-width: 500px;      /* Ограничиваем ширину, чтобы картинка не была огромной */
+            width: 100%;           /* Адаптивность для телефонов */
+            transition: 0.3s;      /* Плавность эффекта */
+        }
+
+        /* Эффект увеличения картинки при наведении */
+        .my-img:hover {
+            transform: scale(1.05);
+        }
+
+        /* СТИЛИ ДЛЯ КНОПКИ */
+        .my-btn {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .my-btn:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Привет! Я учусь кодить с нуля</h1>
+    <p>Это моя первая настоящая веб-страница.</p>
+    
+    <!-- 🖼 ТВОЯ КАРТИНКА С ПРИРОДОЙ -->
+    <img src="nature.jpg" alt="Красивые горы" class="my-img">
+
+
+
+    <!-- 🔘 КНОПКА -->
+    <button class="my-btn" onclick="sayHello()">Нажми меня</button>
+
+    <script>
+        function sayHello() {
+            const colors = ["#ff5722", "#4caf50", "#2196f3", "#9c27b0", "#ffeb3b", "#e91e63"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+
+</body>
+</html>
